@@ -4,8 +4,8 @@ const app = express();
 //Falando ao express que a view engine é o EJS
 app.set('view engine', 'ejs');
 
-app.get("/", () => {
-    res.send("Bem vindo ao meu site");
+app.get("/", (req, res) => {
+    res.render("index");
 });
 
 app.listen(8080, ()=> {
